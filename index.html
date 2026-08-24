@@ -354,7 +354,152 @@
 
   .res-card h4{font-size:.9rem;font-weight:700;margin-bottom:.22rem;}
   .res-card p{font-size:.81rem;color:var(--text-muted);line-height:1.55;}
+   
 
+  /* =========================
+   SERVICES
+========================= */
+
+.services {
+  padding: 90px 6%;
+  background: #f8fbff;
+}
+
+.services-grid {
+  max-width: 1200px;
+  margin: 45px auto 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+
+  align-items: stretch;
+}
+
+.service-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 330px;
+  padding: 28px 25px;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(20, 90, 170, 0.10);
+  border-radius: 18px;
+
+  box-shadow: 0 8px 25px rgba(0, 60, 120, 0.07);
+
+  transition: 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 35px rgba(0, 80, 160, 0.14);
+}
+
+.service-icon {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eef6ff;
+  border-radius: 14px;
+
+  font-size: 27px;
+
+  margin-bottom: 18px;
+}
+
+.service-number {
+  position: absolute;
+
+  top: 25px;
+  right: 25px;
+
+  padding: 6px 10px;
+
+  border-radius: 20px;
+
+  background: #eef6ff;
+  color: #1670c9;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.service-card h3 {
+  margin: 0 0 12px;
+
+  color: #092d5c;
+
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.service-card p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.service-btn {
+  margin-top: auto;
+  padding-top: 22px;
+
+  color: #0878d1;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+.service-btn:hover {
+  color: #f28c28;
+  transform: translateX(4px);
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .services {
+    padding: 65px 5%;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .service-card {
+    min-height: 290px;
+  }
+
+}
   /* ABOUT */
   .about-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
 
@@ -450,9 +595,31 @@
     .nav-links a{padding:.36rem .58rem;font-size:.84rem;}
   }
   @media(max-width:600px){.nav-links{display:none;}}
+
+  /* Footer Visitor Count */
+footer {
+  position: relative;
+}
+
+.footer-visit-count {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+
+  font-size: 14px;
+  font-weight: 600;
+  color: #7dd3fc;
+
+  background: rgba(255, 255, 255, 0.08);
+  padding: 8px 14px;
+  border-radius: 20px;
+
+  border: 1px solid rgba(125, 211, 252, 0.2);
+}
 </style>
 </head>
 <body>
+  
 
 <!-- NAVBAR -->
 <nav>
@@ -464,6 +631,7 @@
     <li><a href="#home">Home</a></li>
     <li><a href="#features">Features</a></li>
     <li><a href="#courses">Courses</a></li>
+    <li><a href="#services">Services</a></li>
     <li><a href="#resources">Resources</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#contact" class="nav-cta">Contact</a></li>
@@ -704,9 +872,219 @@
         <a href="./overview.html" target="_blank" class="enroll-btn">Enroll Now →</a>
       </div>
     </div>
+    <!-- SQL & DATABASE MANAGEMENT -->
+<div class="c-card reveal">
+  <div class="c-top">
+    <div class="c-icon">🗄️</div>
+    <h3>SQL &amp; Database Management</h3>
+    <p>Master Databases &amp; SQL from Scratch</p>
+  </div>
+  <div class="c-body">
+    <p class="c-desc">Learn SQL and database concepts step by step — queries, joins, subqueries, functions, constraints, database design, and real-world problem solving.</p>
+    <a href="./overview.html" target="_blank" class="enroll-btn">Enroll Now →</a>
+  </div>
+</div>
+
+<!-- PLACEMENT & INTERVIEW PREPARATION -->
+<div class="c-card reveal">
+  <div class="c-top">
+    <div class="c-icon">🎯</div>
+    <h3>Placement &amp; Interview Preparation</h3>
+    <p>Complete Preparation for Your Dream Job</p>
+  </div>
+  <div class="c-body">
+    <p class="c-desc">Prepare for placements with aptitude, logical reasoning, verbal ability, technical skills, coding, HR interviews, technical interviews, and mock interview practice.</p>
+    <a href="./overview.html" target="_blank" class="enroll-btn">Enroll Now →</a>
+  </div>
+</div>
 
   </div>
 </section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+
+  <div class="section-head reveal">
+    <div class="section-label">Our Services</div>
+
+    <h2 class="sec-title">
+      Build Your <span class="hl">Professional Profile</span>
+    </h2>
+
+    <p class="sec-sub">
+      Professional services to help you build your profile, showcase your skills,
+      and move closer to your career goals.
+    </p>
+  </div>
+
+  <div class="services-grid">
+
+    <!-- 01 -->
+    <div class="service-card reveal">
+      <div class="service-icon">📄</div>
+      <div class="service-number">01</div>
+
+      <h3>ATS-Optimized Resume</h3>
+
+      <p>
+        Get an ATS-friendly, professional resume designed to help your profile
+        get noticed by top companies.
+      </p>
+
+      <a href="./overview.html" target="_blank" class="service-btn">
+        Get Started →
+      </a>
+    </div>
+
+
+    <!-- 02 -->
+    <div class="service-card reveal">
+      <div class="service-icon">💼</div>
+      <div class="service-number">02</div>
+
+      <h3>Professional &amp; Personal Portfolio</h3>
+
+      <p>
+        Showcase your skills, projects, achievements, and experience with a
+        professional portfolio.
+      </p>
+
+      <a href="./overview.html" target="_blank" class="service-btn">
+        Get Started →
+      </a>
+    </div>
+
+
+    <!-- 03 -->
+    <div class="service-card reveal">
+      <div class="service-icon">📑</div>
+      <div class="service-number">03</div>
+
+      <h3>Project Documentation</h3>
+
+      <p>
+        Get well-structured project documentation for B.Tech and degree projects
+        with professional formatting.
+      </p>
+
+      <a href="./overview.html" target="_blank" class="service-btn">
+        Get Started →
+      </a>
+    </div>
+
+
+    <!-- 04 -->
+    <div class="service-card reveal">
+      <div class="service-icon">💻</div>
+      <div class="service-number">04</div>
+
+      <h3>Project Code, Guidance &amp; Viva</h3>
+
+      <p>
+        Project source code, technical guidance, project explanation, and viva
+        preparation support.
+      </p>
+
+      <a href="./overview.html" target="_blank" class="service-btn">
+        Get Started →
+      </a>
+    </div>
+
+
+    <!-- 05 -->
+    <div class="service-card reveal">
+      <div class="service-icon">📊</div>
+      <div class="service-number">05</div>
+
+      <h3>PPT &amp; Project Presentation</h3>
+
+      <p>
+        Professional project PPTs and presentation preparation to clearly
+        explain your work and make an impact.
+      </p>
+
+      <a href="./overview.html" target="_blank" class="service-btn">
+        Get Started →
+      </a>
+    </div>
+
+
+    <!-- 06 -->
+    <div class="service-card reveal">
+      <div class="service-icon">🔗</div>
+      <div class="service-number">06</div>
+
+      <h3>Job Profile Optimization</h3>
+
+      <p>
+        Optimize LinkedIn, GitHub, Naukri, and other job profiles to create a
+        strong professional presence.
+      </p>
+
+      <a href="./overview.html" target="_blank" class="service-btn">
+        Get Started →
+      </a>
+    </div>
+
+
+    <!-- 07 -->
+    <div class="service-card reveal">
+      <div class="service-icon">🌐</div>
+      <div class="service-number">07</div>
+
+      <h3>Business Website Development</h3>
+
+      <p>
+        Modern, responsive websites for businesses and professionals with
+        maintenance and update support.
+      </p>
+
+      <a href="./overview.html" target="_blank" class="service-btn">
+        Get Started →
+      </a>
+    </div>
+
+
+    <!-- 08 -->
+    <div class="service-card reveal">
+      <div class="service-icon">🚀</div>
+      <div class="service-number">08</div>
+
+      <h3>Personal Branding Kit</h3>
+
+      <p>
+        Build a consistent professional identity across your Resume, LinkedIn,
+        GitHub, Portfolio, and online presence.
+      </p>
+
+      <a href="./overview.html" target="_blank" class="service-btn">
+        Get Started →
+      </a>
+    </div>
+
+
+    <!-- 09 -->
+    <div class="service-card reveal">
+      <div class="service-icon">✉️</div>
+      <div class="service-number">09</div>
+
+      <h3>Cover Letter &amp; Job Application Support</h3>
+
+      <p>
+        Get job-specific cover letters and guidance to apply for relevant
+        opportunities effectively.
+      </p>
+
+      <a href="./overview.html" target="_blank" class="service-btn">
+        Get Started →
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+
 
 <!-- RESOURCES -->
 <section class="resources" id="resources">
@@ -816,10 +1194,16 @@
 </section>
 
 <!-- FOOTER -->
+<!-- FOOTER -->
 <footer>
+  <div class="footer-visit-count">
+    👁️ <span id="visit-count">Loading...</span> Website Visits
+  </div>
+
   <div class="f-logo">
     <span class="f-brand">GuideSphere</span>
   </div>
+
   <p>© 2026 GuideSphere. All Rights Reserved.</p>
 </footer>
 
