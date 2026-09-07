@@ -8,7 +8,7 @@ registerForm.addEventListener("submit", async function(event) {
     const password = document.getElementById("password").value;
 
     try {
-        const response = await fetch("https://guideweb-1.onrender.com", {
+        const response = await fetch("https://guideweb-1.onrender.com/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
